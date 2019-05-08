@@ -27,6 +27,15 @@ function validMail(a, b) {
 
 }
 
+function valid1(a, b) {
+    let val = document.getElementById(a).value;
+    if ((/[\W_]/.test(val)) || (val == '')) {
+        document.getElementsByClassName('greska')[b].innerHTML = '*';
+    }
+}
+
+
+
 //brise * kada je onfocus polje u koje treba da unesemo ispravku
 function unos(b) {
     document.getElementsByClassName('greska')[b].innerHTML = '';
@@ -81,6 +90,7 @@ function registracija() {
 
         console.log(nizKorisnika);
         console.log(noviKorisnik);
+        obrisi();
     }
-    obrisi();
+
 } //kraj funkcije registracija

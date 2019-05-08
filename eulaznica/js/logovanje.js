@@ -21,6 +21,13 @@ function valid(a, b) {
         document.getElementsByClassName('greska')[b].innerHTML = '*';
     }
 }
+
+function valid1(a, b) {
+    let val = document.getElementById(a).value;
+    if ((/[\W_]/.test(val)) || (val == '')) {
+        document.getElementsByClassName('greska')[b].innerHTML = '*';
+    }
+}
 //brise * kada je onfocus polje u koje treba da unesemo ispravku
 function unos(b) {
     document.getElementsByClassName('greska')[b].innerHTML = '';
@@ -43,8 +50,8 @@ function obrisi() {
 var nizKorisnika = [];
 
 function logovanje() {
-    if (document.getElementById('greska1').value == '*' ||
-        document.getElementById('greska2').value == '*') {
+    if (document.getElementById('greska1').innerHTML == '*' ||
+        document.getElementById('greska2').innerHTML == '*') {
         alert('Neispravan unos ili prazno polje');
     } else {
         document.getElementById('pokupi').style.display = 'none';
@@ -71,7 +78,7 @@ function logovanje() {
         }
 
         if (trenutnoUlogovani.status == 9) {
-            alert("Niste ulogovani. Proverite lozinku");
+            alert("Niste ulogovani. Registrujte se");
             let trenutnoUlogovani = { status: 9, email: "gost" };
             //praznimo localStoridze
             localStorage.removeItem('trenutnoulogovanikorisnik');
@@ -85,6 +92,7 @@ function logovanje() {
             //smesta trenutno ulogovanog korisnika u localStoride
             localStorage.setItem('trenutnoulogovanikorisnik', JSON.stringify(trenutnoUlogovani));
         }
+        obrisi();
     }
-    obrisi();
+
 } //kraj funkcije registracija

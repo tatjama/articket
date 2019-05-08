@@ -93,9 +93,9 @@ function dogadjaj() {
         console.log(nizDogadjaja);
         console.log(noviDogadjaj);
 
-
+        obrisi();
 
 
     }
-    obrisi();
+
 } //kraj funkcije dogadjaj
