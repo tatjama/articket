@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Unos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
+    <link rel="icon" href="../slikezavrsni/drama6.jpg" type="image/jpg">
+
+</head>
+
+<body>
+    <div class="omotac">
+        <h3> <i class="fa fa-opencart" style="font-size:44px;color:red"> UNOS DOGAĐAJA </i></h3>
+        <button type="reset" onclick="noviFormular()" class="fiksni">NOVI DOGAĐAJ</button>
+
+
+        <a href="prodaja.html">PRODAJA</a>
+        <a href="../index.html">HOME</a>
+
+        <!--<form id="pokupi" style="display: none">-->
+        <form id="pokupi">
+            <fieldset>
+                <legend>Unos događaja</legend>
+
+                Naziv događaja:
+                <span class="greska" title="Pogrešan unos. Unesite naziv dogadjaja"></span>
+                <input type="text" placeholder="Naziv dogadjaja" id="naziv" onblur="valid('naziv', 0)" onfocus="unos(0)" required>
+                <br> Autor:
+                <span class="greska" title="Pogrešan unos. Unesite ime i prezime autora"></span>
+                <input type="text" placeholder="Ime autora" id="autor" onblur="valid('autor', 1)" onfocus="unos(1)" required>
+                <br>Cena:
+                <span class="greska" title="Pogrešan unos. Unesite cenu ulaznice"></span>
+                <input type="number" placeholder="Cena ulaznice" id="cena" onblur="validBroj()" onfocus="unos(2)" required>
+                <br> Datum događaja:
+                <span class="greska" title="Pogrešan unos. Unesite datum dogadjaja"></span>
+                <input type="date" id="datum" name="bday" required><br> Vrsta događaja:
+                <input list="grupa" name="grupa" id="vrstaDogadjaja" placeholder="Vrsta dogadjaja"><br>
+                <datalist id="grupa">
+                    <option value="Opera">
+                    <option value="Balet">
+                    <option value="Predstava">
+                    <option value="Filharmonija">
+                </datalist><br>
+                <button type="button" onclick="brojUlaznica()"> Količina:</button>
+                <input type="number" placeholder="Kolicina" id="kolicina" readonly>
+                <br> Scena:
+                <input type="radio" name="rh" id="pozitivna" checked> <span>Mala       </span><br>
+                <input type="radio" name="rh"> <span>Velika</span><br>
+                <button type="button" onclick="dogadjaj()">Pokupi</button>
+                <button type="reset" onclick="obrisi()">Obriši</button>
+
+            </fieldset>
+        </form>
+    </div>
+    <script src="../js/unos.js"></script>
+</body>
+
+</html>

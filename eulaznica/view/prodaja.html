@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prodaja</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
+    <link rel="icon" href="../slikezavrsni/drama6.jpg" type="image/jpg">
+
+</head>
+
+<body>
+    <a href="unos.html">UNOS</a>
+    <a href="../index.html">HOME</a>
+
+    <div class="omotac">
+        <h1 onmouseover="filter()"> <i class="fa fa-opencart" style="font-size:48px;color:red">  </i> FILTER DOGAĐAJA</h1>
+
+        <!-- <button type="button" onclick="filter()" class="fiksni">Filteri</button><br><br>-->
+
+        <!--Forma za izbor filtera-->
+
+        <form id="selektujFilter" style="display: none">
+            <fieldset>
+                Vrsta događaja:<br>
+                <select id="filterVrsta" size="4">          
+                            
+                                    <option value="Opera">  Opera </option>
+                                    <option value="Balet">  Balet </option>
+                                    <option value="Predstava">  Predstava </option>
+                                    <option value="Filharmonija"> Filharmonija </option>  
+                            </select><br> Vrsta scene:<br>
+                <select id="filterScena" size="2">
+                            
+                                <option value="Mala scena">Mala</option>
+                                <option value="Velika scena">Velika</option>
+                            </select><br> Količina veća od 0:<br>
+                <input type="checkbox" id="kolicinaKarata"><br> Dogadjaji čije ime sadrži karaktere:<br>
+                <input type="text" id="karakter"><br><br>
+                <input type="checkbox" id="prebroj">Prebroj filtrirane događaje<br>
+
+                <button type="button" onclick="filtriraj()">Filtriraj</button>
+                <button type="reset">Obriši</button>
+                <a href="filter.html" class="rezervisi">Rezerviši</a>
+
+            </fieldset>
+        </form>
+        <br><br>
+        <!--------------------------------------------------------------------------------------------->
+        <div id="ispisOpcijaFiltera"></div>
+
+        <table id="roditelj">
+            <tr id="tabelaFiltriranihDogadjaja1" style="display: none">
+                <th>NAZIV</th>
+                <th>AUTOR</th>
+                <th>CENA </th>
+                <th>DATUM</th>
+                <th>KOLIČINA ULAZNICA</th>
+                <th>VRSTA DOGAĐAJA</th>
+                <th>SCENA</th>
+            </tr>
+        </table>
+    </div>
+    <script src="../js/prodaja.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Logovanje</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
+    <link rel="icon" href="../slikezavrsni/drama6.jpg" type="image/jpg">
+
+</head>
+
+<body>
+    <div class="omotac">
+        <h3> <i class="fa fa-opencart" style="font-size:44px;color:red"> LOGOVANJE </i></h3>
+        <!--
+            <button type="button" onclick="prikaziSvePacijente()" class="fiksni" id="sviPacijenti" style="display: none"> SVI PACIJENTI</button>
+            <a href="filteri.html" target="_blank">FILTRIRAJ PACIJENTE</a>
+            -->
+
+        <a href="registracija.html">REGISTRACIJA</a>
+        <a href="../index.html">HOME</a>
+
+        <!--<form id="pokupi" style="display: none">-->
+        <form id="pokupi">
+            <fieldset>
+                <legend>logovanje</legend>
+
+
+                <br>E-mail:
+                <span class="greska" id="greska1" title="Pogrešan unos. Unesite validan E-mail"></span>
+                <input type="email" placeholder="E-mail" id="cena" onblur="validMail('cena', 0)" onfocus="unos(0)" required>
+                <br> Password:
+                <span class="greska" id="greska2" title="Pogrešan unos. Unesite password"></span>
+                <input type="password" id="datum" placeholder="Lozinka" onblur="valid('datum', 1)" onfocus="unos(1)" required><br>
+
+                <button type="button" onclick="logovanje()">Uloguj </button>
+                <button type="reset" onclick="obrisi()">Obriši</button>
+
+            </fieldset>
+        </form>
+    </div>
+    <script src="../js/logovanje.js"></script>
+</body>
+
+</html>

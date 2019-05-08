@@ -1,0 +1,141 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-weight: bold;
+}
+
+fieldset {
+    width: 460px;
+    background-color: blanchedalmond;
+    border: 2px solid darksalmon;
+}
+
+a {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 8px;
+    width: 120px;
+    font-size: 18px;
+    background-color: lightgoldenrodyellow;
+    text-decoration: none;
+    border: 2px solid grey;
+    border-left-color: lightgray;
+    border-top-color: lightgrey;
+    color: black;
+    text-align: center;
+}
+
+a:hover {
+    background-color: darksalmon;
+    color: white;
+}
+
+.obrisi {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 8px;
+    width: 120px;
+    font-size: 18px;
+    background-color: lightgoldenrodyellow;
+    text-decoration: none;
+    border: 2px solid grey;
+    border-left-color: lightgray;
+    border-top-color: lightgrey;
+    color: black;
+    text-align: center;
+}
+
+.rezervisi {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 5px;
+    width: 120px;
+    background-color: lightgoldenrodyellow;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.rezervisi:hover {
+    background-color: darksalmon;
+    color: white;
+}
+
+button {
+    border-radius: 20px;
+    padding: 5px;
+    width: 120px;
+    background-color: lightgoldenrodyellow;
+}
+
+button:hover {
+    background-color: gray;
+    color: bisque;
+    font-weight: bold;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    margin: 3px;
+    border: 2px solid darksalmon;
+}
+
+span {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+td,
+th {
+    height: 50px;
+    width: 150px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+th {
+    background-color: darksalmon;
+}
+
+.omotac {
+    position: relative;
+    left: 30%;
+}
+
+.fiksni {
+    position: sticky;
+    top: 0px;
+    left: 20%;
+    z-index: 2;
+    width: 200px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.greska {
+    color: red;
+}
+
+#roditelj {
+    position: relative;
+    left: -20%;
+}
+
+#pokupi {
+    text-align: right;
+}
+
+.rezervacija {
+    background-color: salmon;
+    text-align: center;
+}
+
+#poljeUkupno {
+    background-color: lightgray;
+    width: 120px;
+    height: 50px;
+    float: right;
+}

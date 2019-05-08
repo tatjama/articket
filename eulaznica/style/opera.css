@@ -1,0 +1,84 @@
+body,
+html {
+    height: 80%;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.parallax1 {
+    /* The image used */
+    background-image: url('../slikezavrsni/pozoriste1.jpg');
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url('../slikezavrsni/filharmonija5.jpg');
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    /* The image used */
+    background-image: url('../slikezavrsni/filharmonija4.jpg');
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.opis {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 40px;
+    box-sizing: border-box;
+    height: 300px;
+    background-color: bisque;
+    font-size: 16px;
+}
+
+.linkovi {
+    border: 0px;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    justify-content: center;
+}
+
+p {
+    padding: 20px;
+}
+
+.dugme {
+    border-radius: 30px;
+    padding: 20px;
+    text-decoration: none;
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dugme :hover,
+#omotacDugme :hover {
+    background-color: brown;
+    color: white;
+}
