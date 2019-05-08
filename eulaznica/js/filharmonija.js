@@ -1,6 +1,6 @@
-upisiBalet();
+upisiBalet("Filharmonija");
 
-function upisiBalet() {
+function upisiBalet(x) {
     //nizDogadjaja izvlacimo iz localS
     let dogadjanja = JSON.parse(localStorage.getItem('bazadogadjaja'));
 
@@ -9,7 +9,7 @@ function upisiBalet() {
 
     filterBalet = dogadjanja.filter(
         function(noviDogadjaj) {
-            if (noviDogadjaj.vrsta == "Filharmonija") {
+            if (noviDogadjaj.vrsta == x) {
                 return true;
             } else {
                 return false;
@@ -20,8 +20,14 @@ function upisiBalet() {
     console.log(filterBalet);
 
     for (let i = 0; i < filterBalet.length; i++) {
-        document.getElementById('baletRezervacijaNaziv' + i).innerHTML = filterBalet[i].naziv;
-        document.getElementById('baletRezervacijaCena' + i).innerHTML = filterBalet[i].cena;
+
+        //refaktorizacija
+        let korpa = document.getElementById('korpa');
+        var omotacSlike = document.createElement('div');
+        omotacSlike.innerHTML = '<img id="filharmonija"' + (i + 1) + ' class="linkovi" alt="filharmonija"' + (i + 1) + ' src="../slikezavrsni/filharmonija' + (i + 1) + '.jpg"><br><span>' + filterBalet[i].naziv + '</span> <br> Cena: <span>' + filterBalet[i].cena + '</span>   <br>Količina <input type="number" min="0" max="20" placeholder="0" id="rezervacija' + i + '"><br>';
+        korpa.appendChild(omotacSlike);
+
+
     }
 
 }
