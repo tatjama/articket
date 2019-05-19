@@ -7,51 +7,245 @@
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />-->
     <link rel="icon" href="slikezavrsni/drama6.jpg" type="image/jpg">
     <style>
         body,
         html {
             height: 100%;
-            margin: 0;
+            margin: 0%;
+            padding: 0%;
+            font-family: Arial, Helvetica, sans-serif;
         }
+        /*HEADER*/
         
         .zaglavlje {
-            /* The image used */
             background-image: url("slikezavrsni/pozoriste1.jpg");
-            /* Full height */
-            height: 50%;
-            /* Center and scale the image nicely */
-            background-position: center;
+            background-position: top;
             background-repeat: no-repeat;
             background-size: cover;
+            height: 40%;
+            text-align: center;
+            border: solid black 2px;
         }
+        
+        a#eshop.mobile {
+            display: none;
+        }
+        
+        #prodavnica {
+            position: absolute;
+            top: 0%;
+            right: 1%;
+            font-size: 12px;
+            margin: 0px;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 20px;
+        }
+        
+        li {
+            display: inline-block;
+        }
+        
+        a:hover {
+            color: white;
+            font-size: 18px;
+            text-shadow: black 2px 2px 2px;
+        }
+        
+        
+        
+        a {
+            color: goldenrod;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 20px;
+            font-weight: bold;
+            text-shadow: black 2px 2px 2px;
+        }
+        
+        nav {
+            margin: 0%;
+            padding: 0%;
+            text-transform: uppercase;
+            padding: 20px;
+        }
+        
+        #eshop {
+            background-color: black;
+            background-image: url("slikezavrsni/logo.jpg");
+            background-position: -5px -2px;
+            background-size: 115px;
+            border: 1px solid white;
+            display: inline-block;
+            position: relative;
+            top: -10px;
+            text-indent: -99999px;
+            height: 20px;
+            width: 60px;
+            border-radius: 40px;
+        }
+        
+        #eshop:hover {
+            box-shadow: black 2px 2px 2px;
+        }
+        /*RESPONSIVE*/
+        
+        @media screen and (max-width: 780px) {
+           
+            .zaglavlje {}
+            a#eshop.mobile {
+                display: inline-block;
+                margin: 20px;
+            }
+            a#eshop.desktop {
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width: 580px) {
+            
+            li {
+                display: table-row-group;
+            }
+            #prodavnica {
+                position: relative;
+                left: 200px;
+                top: -255px;
+                text-align: left;
+                font-size: 16px;
+            }
+        }
+
+        /*OMOTAC*/
+
+        #ram{
+            background-image: radial-gradient(white, goldenrod, black);
+            padding: 25px;
+            border:0px solid black;
+        }
+        
+        /*SEKCIJA*/
+        
+        #sekcija {
+            
+            text-align: center;
+            padding: 3%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        #sekcija figure {
+            width: 200px;
+            margin: auto;
+            color: goldenrod;
+            font-weight: bold;
+            text-shadow: black 1px 1px;
+        }
+        
+        #sekcija figure img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: solid 1px white;
+            box-shadow: gray 0px 0px 10px;
+        }
+
+        h2 {
+            
+            color: white;
+            padding: 0% 4%;
+        }
+
+        /*GLAVNI*/
         
         #glavni {
             padding: 3%;
+            background-color:white;
+        }
+        /*FOOTER*/
+        
+        footer {
+            background-color: black;
+            color: grey;
+            font-size: 12px;
+            text-align: center;
+            padding: 1% 3%;
         }
     </style>
 
 </head>
 
 <body>
-    <div class="zaglavlje">
+    <div class="nesto">
     </div>
-    <div class="omotac1">
+    <header class="zaglavlje">
         <!-- <a id="onama" href="view/onama.html">O nama</a>-->
-        <a id="galerija" href="view/galerija.html">Galerija</a>
-        <a id="unos" href="view/unos.html">Unos</a>
-        <a id="prodaja" href="view/prodaja.html">Prodaja</a>
-        <a id="eshop" href="view/prodavnica.html">E-SHOP</a>
-        <a id="registracija" href="view/registracija.html">Registracija</a>
-        <a id="logovanje" href="view/logovanje.html">Logovanje</a>
-        <a href="#" onclick="postaviLocalStoridge()">Početno</a>
-    </div>
+
+        <nav>
+            <ul>
+                <li><a id="galerija" href="view/galerija.html">Galerija</a></li>
+                <li><a href="#" onclick="postaviLocalStoridge()">Početno</a></li>
+                <li><a class="desktop" id="eshop" href="index.html">E-shop</a></li>
+                <li><a id="lokacija" href="view/lokacija.html">Lokacija</a></li>
+                <li><a id="kontakt" href="view/kontakt.html">Kontakt</a></li>
+                <li><a class="mobile" id="eshop" href="index.html">E-shop</a></li>
+            </ul>
+        </nav>
+        <div id="prodavnica">
+            <ul>
+                <li><a id="unos" href="view/unos.html">Unos</a></li>
+                <li> <a id="prodaja" href="view/prodaja.html">Prodaja</a></li>
+                
+                <li><a id="registracija" href="view/registracija.html">Registracija</a></li>
+                <li><a id="logovanje" href="view/logovanje.html">Logovanje</a></li>
+            </ul>
+
+        </div>
+
+    </header>
+    <div id="ram">
+        <div id="podloga">
+
+    <div style="text-align: right"><a id="eshop1" href="view/prodavnica.html" style="color:goldenrod">
+        <i class="fa fa-opencart" style="font-size:48px;color:goldenrod">
+        </i>E-shop</a></div>
+    <section id="sekcija">
+           
+        <figure>
+            <img src="slikezavrsni/balerina9.jpg" alt="balerina">
+            <figcaption>BALET</figcaption>
 
 
+        </figure>
+        <figure>
+            <img src="slikezavrsni/drama7.jpg" alt="Zoran Radmilovic">
+            <figcaption>DRAMA</figcaption>
 
-    <div id="glavni">
-        <h1>DOBRO DOSLI</h1>
+
+        </figure>
+        <figure>
+            <img src="slikezavrsni/filharmonija7.jpg" alt="violina">
+            <figcaption>KONCERTI</figcaption>
+
+
+        </figure>
+        <figure>
+            <img src="slikezavrsni/filharmonija6.jpg" alt="opera">
+            <figcaption>OPERA</figcaption>
+
+
+        </figure>
+    </section>
+
+    <h2>PREMIJERE </h1>
+
+    <section id="glavni">
+        
         <p>
             Lorem ipsum dolor sit amet, fugit velit theophrastus sit ne, eros feugait no ius. Dicant tincidunt cum et, iuvaret nominati quaestio ei qui. Laoreet concludaturque eam no, illud deseruisse est te. Inani dolorum est et, eirmod euismod oporteat cu pri.
             Erant sonet eruditi at quo, minim lucilius ei vix. Sed soluta euismod ei. Ad alia adipisci sed. Mea ea zril facilisis. Pro decore nominati ad, no dictas alterum eam. Et usu ancillae salutandi, in eos hinc doming. Agam deterruisset eum te,
@@ -60,9 +254,12 @@
             ea pro. Ceteros intellegam in sed, pri tempor placerat ea, ne est verear scripta. Nec in odio partem repudiandae, vix omnesque quaestio liberavisse ad, sumo decore eu cum. Mea eu mucius insolens, ei erant accumsan consequat est. Ut vis solet
             detracto appellantur. Eu inani errem ludus sit, vim convenire argumentum id, ne exerci laoreet vituperatoribus eos. Ut eam quando ceteros. Quo ut partiendo vituperata.
         </p>
-    </div>
-    <div id="sekcija"></div>
-    <div id="podnozje"></div>
+    </section>
+</div>
+</div>
+
+    <footer id="podnozje">Beograd, Milutina Milankovica 1, 011-111-1111</footer>
+    <script src="js/pocetni.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

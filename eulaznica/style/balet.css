@@ -43,14 +43,24 @@ html {
 
 .opis {
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
-    padding: 40px;
     box-sizing: border-box;
-    height: 300px;
-    background-color: bisque;
+    background-color: goldenrod;
     font-size: 16px;
+    padding: 10px;
+    width: 100%;
 }
+.opis1{
+    display: flex;
+    
+
+}
+
+
+
+
 
 .linkovi {
     border: 0px;
@@ -79,6 +89,6 @@ a {
 
 .dugme :hover,
 #omotacDugme :hover {
-    background-color: brown;
+    background-color: darkgoldenrod;
     color: white;
 }
