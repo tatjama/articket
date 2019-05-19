@@ -21,27 +21,43 @@ function registracija() {
         document.getElementsByClassName('greskaR')[3].innerHTML != '') {
         alert('Neispravan unos ili prazno polje');
     } else {
-        document.getElementById('pokupiRezervacija').style.display = 'none';
+
 
         var noviKorisnik = {};
+        //vadi niz iz local S i parsira u JavaScript, smesta u promenljivu nizKorisnika
+        var nizKorisnika = JSON.parse(localStorage.getItem('bazakorisnika')) || [];
+        console.log(nizKorisnika);
 
         noviKorisnik.ime = document.getElementById('imeRegistracija').value.toUpperCase();
         noviKorisnik.prezime = document.getElementById('prezimeRegistracija').value.toUpperCase();
         noviKorisnik.email = document.getElementById('emailRegistracija').value;
         noviKorisnik.lozinka = document.getElementById('lozinkaRegistracija').value;
         noviKorisnik.status = document.getElementById('kolicinaRegistracija').value;
+        nizKorisnika.forEach(element => {
+            if (element.email === noviKorisnik.email) {
+                alert("Postoji korisnik sa tim e-mailom u bazi");
+                document.getElementById('emailRegistracija').value = '';
+                noviKorisnik.email = '';
 
-        //vadi niz iz local S i parsira u JavaScript, smesta u promenljivu nizKorisnika
-        var nizKorisnika = JSON.parse(localStorage.getItem('bazakorisnika')) || [];
-        //ubacuje novi dogadjaj objekat u nizKorisnika
-        console.log(nizKorisnika);
-        nizKorisnika.push(noviKorisnik);
-        //smesta nizKorisnika u localStoride
-        localStorage.setItem('bazakorisnika', JSON.stringify(nizKorisnika));
+            }
 
-        console.log(nizKorisnika);
-        console.log(noviKorisnik);
-        obrisi();
+        });
+        if (noviKorisnik.email !== '') {
+            //ubacuje novi dogadjaj objekat u nizKorisnika        
+            nizKorisnika.push(noviKorisnik);
+            //smesta nizKorisnika u localStoride
+            localStorage.setItem('bazakorisnika', JSON.stringify(nizKorisnika));
+
+            console.log(nizKorisnika);
+            console.log(noviKorisnik);
+            obrisiR();
+            document.getElementById('pokupiRezervacija').style.display = 'none';
+        }
+
+
+
+
+
     }
 
 } //kraj funkcije registracija
