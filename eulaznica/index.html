@@ -19,6 +19,40 @@
 
     <header class="zaglavlje">
         <!-- <a id="onama" href="view/onama.html">O nama</a>-->
+
+
+        <!--REGISTRACIJA POP-UP FORMA-->
+
+        <div class="popupForma" id="mojaRegistracija">
+            <form id="pokupiRezervacija">
+                <fieldset>
+                    <legend>Registracija korisnika</legend>
+
+                    Ime:
+                    <span class="greskaR" title="Pogrešan unos. Unesite ime"></span>
+                    <input type="text" placeholder="Unesite ime" id="imeRegistracija" onblur="validR('imeRegistracija', 0)" onfocus="unosR(0)" required>
+                    <br> Prezime:
+                    <span class="greskaR" title="Pogrešan unos. Unesite prezime"></span>
+                    <input type="text" placeholder="Unesite prezime" id="prezimeRegistracija" onblur="validR('prezimeRegistracija', 1)" onfocus="unosR(1)" required>
+
+                    <br>E-mail:
+                    <span class="greskaR" title="Pogrešan unos. Unesite validan E-mail"></span>
+                    <input type="email" placeholder="E-mail" id="emailRegistracija" onblur="validMailR('emailRegistracija', 2)" onfocus="unosR(2)" required>
+                    <br> Lozinka:
+                    <span class="greskaR" title="Pogrešan unos. Unesite password"></span>
+                    <input type="password" id="lozinkaRegistracija" name="bday" onblur="valid1R('lozinkaRegistracija', 3)" onfocus="unosR(3)" required><br> Status:
+
+                    <input type="number" placeholder="administrator" id="kolicinaRegistracija" readonly value="1"><br>
+
+                    <button type="button" onclick="registracija()">Registracija</button>
+                    <button type="reset" onclick="obrisiR()">Obriši</button>
+                    <br>
+                    <input type="button" onclick="sakrijRegistracionuFormu()" value="Zatvori">
+                </fieldset>
+            </form>
+        </div>
+
+        <!--LOGOVANJE POP-UP FORMA-->
         <div class="popupForma" id="mojaForma">
             <form id="pokupi">
                 <fieldset>
@@ -55,7 +89,7 @@
             <ul>
                 <li><a id="unos" href="view/unos.html">Unos</a></li>
                 <li><a id="prodaja" href="view/prodaja.html">Prodaja</a></li>
-                <li><a id="registracija" href="view/registracija.html">Registracija</a></li>
+                <li><a id="registracija" href="#" onclick="prikaziRegistracionuFormu()">Registracija</a></li>
                 <li><a id="logovanje" href="#" onclick="prikaziLoginFormu()">Logovanje</a></li>
             </ul>
 
@@ -120,6 +154,8 @@
     <script src="js/logovanje.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/validacijalogovanja.js"></script>
+    <script src="js/validacijaregistracije.js"></script>
+    <script src="js/registracija.js"></script>
     <script>
     </script>
 </body>

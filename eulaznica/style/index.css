@@ -24,7 +24,8 @@ input {
     border: 2px solid goldenrod;
 }
 
-#pokupi {
+#pokupi,
+#pokupiRezervacija {
     text-align: center;
     position: fixed;
     right: 5px;
