@@ -1,48 +1,4 @@
-//funkciju poziva dugme Novi formular
-//dugme Pokupi se pojavljuje. Prilikom ucitavanja programa dugme Pokupi je aktivno. Kada ga pritisnemo
-// pokrecemo funkciju registracija() i sakrivamo dugme Pokupi
-function noviFormular() {
-    document.getElementById('pokupi').style.display = 'initial';
-    obrisi();
-}
-
-//validacija
-function validMail(a, b) {
-    let val = document.getElementById(a).value;
-    if (!(/[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/.test(val)) || (val == '')) {
-        document.getElementsByClassName('greska')[b].innerHTML = '*';
-    }
-
-}
-
-function valid(a, b) {
-    let val = document.getElementById(a).value;
-    if ((/[^A-Za-zČčĆćŠšĐđ]+$/.test(val)) || (val == '')) {
-        document.getElementsByClassName('greska')[b].innerHTML = '*';
-    }
-}
-
-function valid1(a, b) {
-    let val = document.getElementById(a).value;
-    if ((/[\W_]/.test(val)) || (val == '')) {
-        document.getElementsByClassName('greska')[b].innerHTML = '*';
-    }
-}
-//brise * kada je onfocus polje u koje treba da unesemo ispravku
-function unos(b) {
-    document.getElementsByClassName('greska')[b].innerHTML = '';
-}
-
-
-
-//brisemo upisane vrednosti za logovanje
-function obrisi() {
-    document.getElementById('cena').value = '';
-    document.getElementById('datum').value = '';
-
-}
-
-//funkciju poziva dugme Pokupi          
+//funkciju poziva dugme Uloguj         
 //funkcija prikuplja podatke iz forme u HTML-u i smesta u objekat sa nazivom noviKorisnik.
 //potom ubacuje metodom push objekat noviKorisnik u niz nizKorisnika gde ga pamti
 //Istovremeno sakriva dugme Pokupi  da ne bismo mogli greskom da prepisemo jednog korisnika drugim 
@@ -50,9 +6,10 @@ function obrisi() {
 var nizKorisnika = [];
 
 function logovanje() {
-    if (document.getElementById('greska1').innerHTML == '*' ||
-        document.getElementById('greska2').innerHTML == '*') {
-        alert('Neispravan unos ili prazno polje');
+    if (document.getElementById('greska1').innerHTML == '*') {
+        alert('E-mail mora biti u formatu nesto@nesto.xyz')
+    } else if (document.getElementById('greska2').innerHTML == '*') {
+        alert('Lozinka prima samo slova ili brojeve');
     } else {
         document.getElementById('pokupi').style.display = 'none';
 
@@ -64,7 +21,10 @@ function logovanje() {
         //vadi niz iz local S i parsira u JavaScript, smesta u promenljivu nizKorisnika
         var nizKorisnika = JSON.parse(localStorage.getItem('bazakorisnika')) || [];
         console.log(nizKorisnika);
-        let trenutnoUlogovani = { status: 9, email: "gost" };
+        let trenutnoUlogovani = {
+            status: 9,
+            email: "gost"
+        };
 
         for (let i = 0; i < nizKorisnika.length; i++) {
 
@@ -79,11 +39,20 @@ function logovanje() {
 
         if (trenutnoUlogovani.status == 9) {
             alert("Niste ulogovani. Registrujte se");
-            let trenutnoUlogovani = { status: 9, email: "gost" };
+            let trenutnoUlogovani = {
+                status: 9,
+                email: "gost"
+            };
             //praznimo localStoridze
             localStorage.removeItem('trenutnoulogovanikorisnik');
             //smesta trenutno ulogovanog korisnika u localStoride
             localStorage.setItem('trenutnoulogovanikorisnik', JSON.stringify(trenutnoUlogovani));
+            console.log(trenutnoUlogovani);
+            document.getElementById('eshop').style.display = "block";
+            document.getElementById('registracija').style.display = "block";
+            document.getElementById('eshop2').style.display = "none";
+            document.getElementById('unos').style.display = "none";
+            document.getElementById('prodaja').style.display = "none";
 
         } else {
             console.log(trenutnoUlogovani);
@@ -91,8 +60,21 @@ function logovanje() {
             localStorage.removeItem('trenutnoulogovanikorisnik');
             //smesta trenutno ulogovanog korisnika u localStoride
             localStorage.setItem('trenutnoulogovanikorisnik', JSON.stringify(trenutnoUlogovani));
+            if (trenutnoUlogovani.status == 1) {
+                document.getElementById('unos').style.display = "none";
+                document.getElementById('prodaja').style.display = "none";
+                document.getElementById('eshop2').style.display = "block";
+                document.getElementById('registracija').style.display = "none";
+            } else {
+                document.getElementById('eshop').style.display = "none";
+                document.getElementById('eshop2').style.display = "none";
+                document.getElementById('unos').style.display = "block";
+                document.getElementById('prodaja').style.display = "block";
+                document.getElementById('registracija').style.display = "none";
+            }
+
         }
         obrisi();
     }
 
-} //kraj funkcije registracija
+} //kraj funkcije logovanje

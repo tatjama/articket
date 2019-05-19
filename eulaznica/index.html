@@ -7,19 +7,39 @@
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet" type="text/css" media="screen" href="style/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/index.css" />
     <link rel="icon" href="slikezavrsni/drama6.jpg" type="image/jpg">
     <style>
-       
+
     </style>
 
 </head>
 
 <body>
-    <div class="nesto">
-    </div>
+
     <header class="zaglavlje">
         <!-- <a id="onama" href="view/onama.html">O nama</a>-->
+        <div class="popupForma" id="mojaForma">
+            <form id="pokupi">
+                <fieldset>
+                    <legend>LOGOVANJE</legend>
+
+
+                    <br>E-mail:<br>
+                    <span class="greska" id="greska1" title="Pogrešan unos. Unesite validan E-mail"></span>
+                    <input type="email" placeholder="E-mail" id="cena" onblur="validMail('cena', 0)" onfocus="unos(0)" required>
+                    <br> Lozinka:<br>
+                    <span class="greska" id="greska2" title="Pogrešan unos. Unesite password"></span>
+                    <input type="password" id="datum" placeholder="Lozinka" onblur="valid1('datum', 1)" onfocus="unos(1)" required><br>
+                    <br>
+                    <button type="button" onclick="logovanje()">Uloguj </button>
+                    <button type="reset" onclick="obrisi()">Obriši</button>
+                    <br>
+                    <input type="button" onclick="sakrijLoginFormu()" value="Zatvori">
+
+                </fieldset>
+            </form>
+        </div>
 
         <nav>
             <ul>
@@ -34,10 +54,9 @@
         <div id="prodavnica">
             <ul>
                 <li><a id="unos" href="view/unos.html">Unos</a></li>
-                <li> <a id="prodaja" href="view/prodaja.html">Prodaja</a></li>
-                
+                <li><a id="prodaja" href="view/prodaja.html">Prodaja</a></li>
                 <li><a id="registracija" href="view/registracija.html">Registracija</a></li>
-                <li><a id="logovanje" href="view/logovanje.html">Logovanje</a></li>
+                <li><a id="logovanje" href="#" onclick="prikaziLoginFormu()">Logovanje</a></li>
             </ul>
 
         </div>
@@ -46,56 +65,63 @@
     <div id="ram">
         <div id="podloga">
 
-    <div style="text-align: right"><a id="eshop1" href="view/prodavnica.html" style="color:goldenrod">
-        <i class="fa fa-opencart" style="font-size:48px;color:goldenrod">
-        </i>E-shop</a></div>
-    <section id="sekcija">
-           
-        <figure>
-            <img src="slikezavrsni/balerina9.jpg" alt="balerina">
-            <figcaption>BALET</figcaption>
+            <div id="eshop2" style="text-align: right">
+                <a id="eshop1" href="view/prodavnica.html" style="color:goldenrod">
+                    <i class="fa fa-opencart" style="font-size:48px;color:goldenrod">
+        </i>E-shop</a>
+            </div>
+            <section id="sekcija">
+
+                <figure>
+                    <img src="slikezavrsni/balerina9.jpg" alt="balerina">
+                    <figcaption>BALET</figcaption>
 
 
-        </figure>
-        <figure>
-            <img src="slikezavrsni/drama7.jpg" alt="Zoran Radmilovic">
-            <figcaption>DRAMA</figcaption>
+                </figure>
+                <figure>
+                    <img src="slikezavrsni/drama7.jpg" alt="Zoran Radmilovic">
+                    <figcaption>DRAMA</figcaption>
 
 
-        </figure>
-        <figure>
-            <img src="slikezavrsni/filharmonija7.jpg" alt="violina">
-            <figcaption>KONCERTI</figcaption>
+                </figure>
+                <figure>
+                    <img src="slikezavrsni/filharmonija7.jpg" alt="violina">
+                    <figcaption>KONCERTI</figcaption>
 
 
-        </figure>
-        <figure>
-            <img src="slikezavrsni/filharmonija6.jpg" alt="opera">
-            <figcaption>OPERA</figcaption>
+                </figure>
+                <figure>
+                    <img src="slikezavrsni/filharmonija6.jpg" alt="opera">
+                    <figcaption>OPERA</figcaption>
 
 
-        </figure>
-    </section>
+                </figure>
+            </section>
 
-    <h2>PREMIJERE </h1>
+            <h2>PREMIJERE </h1>
 
-    <section id="glavni">
-        
-        <p>
-            Lorem ipsum dolor sit amet, fugit velit theophrastus sit ne, eros feugait no ius. Dicant tincidunt cum et, iuvaret nominati quaestio ei qui. Laoreet concludaturque eam no, illud deseruisse est te. Inani dolorum est et, eirmod euismod oporteat cu pri.
-            Erant sonet eruditi at quo, minim lucilius ei vix. Sed soluta euismod ei. Ad alia adipisci sed. Mea ea zril facilisis. Pro decore nominati ad, no dictas alterum eam. Et usu ancillae salutandi, in eos hinc doming. Agam deterruisset eum te,
-            assentior complectitur eu his. Tation oporteat et qui. Quidam blandit eu vim, laudem equidem theophrastus et vim. Feugiat graecis dissentiet an pri, has an utroque legendos. Commodo alterum suscipit mei ei. Duo vitae scaevola in, usu falli
-            viderer in. Mea eu duis vidit repudiare, ut has putant mollis rationibus. Sit alia homero quaeque et, usu erroribus accusamus te, ea vix fastidii accusata maiestatis. Ex usu verterem comprehensam. Soleat aliquam ex pro, fuisset facilisis repudiare
-            ea pro. Ceteros intellegam in sed, pri tempor placerat ea, ne est verear scripta. Nec in odio partem repudiandae, vix omnesque quaestio liberavisse ad, sumo decore eu cum. Mea eu mucius insolens, ei erant accumsan consequat est. Ut vis solet
-            detracto appellantur. Eu inani errem ludus sit, vim convenire argumentum id, ne exerci laoreet vituperatoribus eos. Ut eam quando ceteros. Quo ut partiendo vituperata.
-        </p>
-    </section>
-</div>
-</div>
+                <section id="glavni">
+
+                    <p>
+                        Lorem ipsum dolor sit amet, fugit velit theophrastus sit ne, eros feugait no ius. Dicant tincidunt cum et, iuvaret nominati quaestio ei qui. Laoreet concludaturque eam no, illud deseruisse est te. Inani dolorum est et, eirmod euismod oporteat cu pri.
+                        Erant sonet eruditi at quo, minim lucilius ei vix. Sed soluta euismod ei. Ad alia adipisci sed. Mea ea zril facilisis. Pro decore nominati ad, no dictas alterum eam. Et usu ancillae salutandi, in eos hinc doming. Agam deterruisset
+                        eum te, assentior complectitur eu his. Tation oporteat et qui. Quidam blandit eu vim, laudem equidem theophrastus et vim. Feugiat graecis dissentiet an pri, has an utroque legendos. Commodo alterum suscipit mei ei. Duo vitae scaevola
+                        in, usu falli viderer in. Mea eu duis vidit repudiare, ut has putant mollis rationibus. Sit alia homero quaeque et, usu erroribus accusamus te, ea vix fastidii accusata maiestatis. Ex usu verterem comprehensam. Soleat aliquam ex
+                        pro, fuisset facilisis repudiare ea pro. Ceteros intellegam in sed, pri tempor placerat ea, ne est verear scripta. Nec in odio partem repudiandae, vix omnesque quaestio liberavisse ad, sumo decore eu cum. Mea eu mucius insolens,
+                        ei erant accumsan consequat est. Ut vis solet detracto appellantur. Eu inani errem ludus sit, vim convenire argumentum id, ne exerci laoreet vituperatoribus eos. Ut eam quando ceteros. Quo ut partiendo vituperata.
+                    </p>
+                </section>
+        </div>
+    </div>
 
     <footer id="podnozje">Beograd, Milutina Milankovica 1, 011-111-1111</footer>
     <script src="js/pocetni.js"></script>
     <script src="./js/main.js"></script>
+    <script src="js/logovanje.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/validacijalogovanja.js"></script>
+    <script>
+    </script>
 </body>
 
 </html>

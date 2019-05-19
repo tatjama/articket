@@ -6,6 +6,9 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/*kopirano*/
+
 fieldset {
     width: 460px;
     background-color: blanchedalmond;
@@ -63,6 +66,9 @@ a:hover {
     color: white;
 }
 
+
+/*KOPIRANO*/
+
 button {
     border-radius: 20px;
     padding: 5px;
@@ -70,11 +76,17 @@ button {
     background-color: lightgoldenrodyellow;
 }
 
+
+/*KOPIRANO*/
+
 button:hover {
     background-color: gray;
     color: bisque;
     font-weight: bold;
 }
+
+
+/*kopirano*/
 
 input {
     width: 200px;
@@ -124,6 +136,9 @@ th {
     position: relative;
     left: -20%;
 }
+
+
+/*kopirano*/
 
 #pokupi {
     text-align: right;

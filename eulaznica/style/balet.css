@@ -47,20 +47,15 @@ html {
     flex-wrap: nowrap;
     justify-content: space-around;
     box-sizing: border-box;
-    background-color: goldenrod;
+    background-image: radial-gradient(white, goldenrod, grey);
     font-size: 16px;
     padding: 10px;
     width: 100%;
 }
-.opis1{
+
+.opis1 {
     display: flex;
-    
-
 }
-
-
-
-
 
 .linkovi {
     border: 0px;
