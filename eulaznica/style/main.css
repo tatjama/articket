@@ -11,8 +11,8 @@ html {
 
 fieldset {
     width: 460px;
-    background-color: blanchedalmond;
-    border: 2px solid darksalmon;
+    background-color: rgb(247, 217, 142);
+    border: 2px solid goldenrod;
 }
 
 a {
@@ -31,7 +31,7 @@ a {
 }
 
 a:hover {
-    background-color: darksalmon;
+    background-color: goldenrod;
     color: white;
 }
 
@@ -62,8 +62,9 @@ a:hover {
 }
 
 .rezervisi:hover {
-    background-color: darksalmon;
+    background-color: goldenrod;
     color: white;
+    font-weight: bold;
 }
 
 
@@ -81,7 +82,7 @@ button {
 
 button:hover {
     background-color: gray;
-    color: bisque;
+    color: white;
     font-weight: bold;
 }
 
@@ -92,7 +93,7 @@ input {
     width: 200px;
     height: 30px;
     margin: 3px;
-    border: 2px solid darksalmon;
+    border: 2px solid goldenrod;
 }
 
 span {
@@ -109,7 +110,7 @@ th {
 }
 
 th {
-    background-color: darksalmon;
+    background-color: goldenrod;
 }
 
 .omotac {
@@ -145,7 +146,7 @@ th {
 }
 
 .rezervacija {
-    background-color: salmon;
+    background-color: rgb(224, 193, 112);
     text-align: center;
 }
 

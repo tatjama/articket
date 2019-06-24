@@ -56,7 +56,7 @@ function promeni(dogadjaj) {
             brojac = 0;
         }
         $("." + brojac).show().slideUp(2000).slideDown(2000);
-        $('p' + '.' + brojac).css("background-color", "red");
+        $('p' + '.' + brojac).css("background-color", "goldenrod");
 
     }
     if (k == 37) {
@@ -66,16 +66,16 @@ function promeni(dogadjaj) {
             brojac = (niz.length - 1);
         }
         $('.' + brojac).show().fadeTo(2000, 0.2);
-        $('p' + '.' + brojac).css("background-color", "red");
+        $('p' + '.' + brojac).css("background-color", "goldenrod");
         $('h1').show().animate({
             left: '550px',
-            top: "150px",
+            top: "300px",
             fontSize: "56px"
 
         }, (500)).queue(function() {
             $(this).css({
-                "color": "red",
-                "text-shadow": "3px 3px 11px black"
+                "color": "goldenrod",
+                "text-shadow": "3px 3px 11px white"
             }).dequeue();
         });
         document.getElementById('tekst').innerHTML = nizTekstova[brojac];
@@ -92,6 +92,6 @@ function resetuj() {
         "font-size": "12px",
         "color": "black",
         "left": "0",
-        "top": "400px"
+        "top": "600px"
     }).hide();
 }

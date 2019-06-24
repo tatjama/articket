@@ -29,7 +29,13 @@ function logovanje() {
         for (let i = 0; i < nizKorisnika.length; i++) {
 
             if (proveraKorisnika.email === nizKorisnika[i].email && proveraKorisnika.lozinka === nizKorisnika[i].lozinka) {
-                alert("vas status je " + nizKorisnika[i].status);
+                if(nizKorisnika[i].status == 1){
+                    alert("Dobro došli "+nizKorisnika[i].ime + " "+nizKorisnika[i].prezime + " ! Vaš status je registrovani korisnik.")
+                }else{
+
+                
+                alert(("Dobro došli "+nizKorisnika[i].ime + " "+nizKorisnika[i].prezime + " ! Vaš status je administratorski."));
+                }
                 trenutnoUlogovani.status = nizKorisnika[i].status;
                 trenutnoUlogovani.email = nizKorisnika[i].email;
                 trenutnoUlogovani.ime = nizKorisnika[i].ime;
@@ -48,11 +54,12 @@ function logovanje() {
             //smesta trenutno ulogovanog korisnika u localStoride
             localStorage.setItem('trenutnoulogovanikorisnik', JSON.stringify(trenutnoUlogovani));
             console.log(trenutnoUlogovani);
-            document.getElementById('eshop').style.display = "block";
+            //document.getElementById('eshop').style.display = "block";
             document.getElementById('registracija').style.display = "block";
             document.getElementById('eshop2').style.display = "none";
             document.getElementById('unos').style.display = "none";
             document.getElementById('prodaja').style.display = "none";
+            document.getElementById('signout').style.display = "none";
 
         } else {
             console.log(trenutnoUlogovani);
@@ -65,12 +72,14 @@ function logovanje() {
                 document.getElementById('prodaja').style.display = "none";
                 document.getElementById('eshop2').style.display = "block";
                 document.getElementById('registracija').style.display = "none";
+                document.getElementById('signout').style.display = "block";
             } else {
-                document.getElementById('eshop').style.display = "none";
+               // document.getElementById('eshop').style.display = "none";
                 document.getElementById('eshop2').style.display = "none";
                 document.getElementById('unos').style.display = "block";
                 document.getElementById('prodaja').style.display = "block";
                 document.getElementById('registracija').style.display = "none";
+                document.getElementById('signout').style.display ="block";
             }
 
         }

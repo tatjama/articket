@@ -75,6 +75,7 @@ a#eshop.mobile {
     font-size: 12px;
 }
 
+
 ul {
     list-style: none;
     padding: 20px;
@@ -86,12 +87,13 @@ li {
 
 a:hover {
     color: white;
-    font-size: 18px;
+    font-size: 22px;
     text-shadow: black 2px 2px 2px;
 }
 
 a {
-    color: goldenrod;
+    color: darkgoldenrod;
+    font-size: 21px;
     text-decoration: none;
     text-transform: uppercase;
     padding: 20px;
@@ -175,9 +177,9 @@ nav {
 #sekcija figure {
     width: 200px;
     margin: auto;
-    color: goldenrod;
+    color: darkgoldenrod;
     font-weight: bold;
-    text-shadow: black 1px 1px;
+    text-shadow: black 2px 2px;
 }
 
 #sekcija figure img {
