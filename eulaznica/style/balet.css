@@ -44,7 +44,7 @@ html {
 .opis {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap:nowrap;
     justify-content: space-around;
     box-sizing: border-box;
     background-image: radial-gradient(white, goldenrod, grey);
@@ -76,6 +76,9 @@ p {
     width: 100px;
     height: 50px;
     margin: 5px;
+}
+button :hover{
+    background-color: brown;
 }
 
 a {
