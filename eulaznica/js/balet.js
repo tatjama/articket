@@ -23,11 +23,17 @@ function upisiBalet(x) {
         //refaktorizacija
         let korpa = document.getElementById('korpa');
         var omotacSlike = document.createElement('div');
+        
+        //omotacSlike.setAttribute("class","item");
         omotacSlike.innerHTML = '<img id="balet"' + (i + 1) + ' class="linkovi" alt="balet"' + (i + 1) + ' src="../slikezavrsni/balerina' + (i + 1) + '.jpg"><br><span>' + filterBalet[i].naziv + '</span> <br> Cena: <span>' + filterBalet[i].cena + '</span>   <br>Količina <input type="number" min="0" max="20" placeholder="0" id="rezervacija' + i + '"><br>';
+        
         korpa.appendChild(omotacSlike);
 
 
     }
+   /* var dugmici = document.createElement('span');
+        dugmici.innerHTML = ' <button type="button" class="dugme" id="dugme"><a href="korpakorisnik.html" > Kupi</a></button><br><button type="button" class="dugme" id="dugme1"><a href="korpakorisnik.html"> Korpa</a></button><br><button type="button" class="dugme" id="dugme2"><a href="prodavnica.html">E-shop</a> </button>'
+        omotacSlike.appendChild(dugmici);*/
 
 }
 
