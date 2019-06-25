@@ -13,7 +13,7 @@ html {
     flex-wrap:nowrap;
     justify-content: center;
     box-sizing: border-box;
-    background-image: radial-gradient(white, goldenrod, grey);
+    background-image: radial-gradient(white, goldenrod);
     font-size: 16px;
     padding: 10px;
     width: 100%;

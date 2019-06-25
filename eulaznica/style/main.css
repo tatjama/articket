@@ -95,6 +95,9 @@ input {
     margin: 3px;
     border: 2px solid goldenrod;
 }
+.radiobutton{
+    height: 20px;
+}
 
 span {
     font-size: 15px;

@@ -43,22 +43,41 @@ html {
 
 .opis {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    padding: 40px;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: center;
     box-sizing: border-box;
-    height: 300px;
-    background-color: bisque;
+    background-image: radial-gradient(white, goldenrod, grey);
     font-size: 16px;
+    padding: 10px;
+    width: 100%;
 }
 
+.opis1 {
+    display: flex;
+}
+/*OVO je izmenjeno*/
+#korpa {
+    flex-wrap: wrap;
+}
+#omotacDugme{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.omotacKorpe{
+    background-image: radial-gradient(white, goldenrod, grey);
+}
 .linkovi {
     border: 0px;
-    width: 150px;
-    height: 150px;
-    margin: 10px;
+    width: 200px;
+    height: 200px;
+    margin: 8px 50px;
     justify-content: center;
 }
+
+
 
 p {
     padding: 20px;
@@ -66,19 +85,27 @@ p {
 
 .dugme {
     border-radius: 30px;
+    border: 0cm;
     padding: 20px;
     text-decoration: none;
     width: 100px;
     height: 50px;
     margin: 5px;
 }
+button :hover{
+    background-color: brown;
 
-a {
-    text-decoration: none;
 }
 
+a {
+   text-decoration: none;
+   color: black;
+}
+
+
 .dugme :hover,
-#omotacDugme :hover {
-    background-color: brown;
+#omotacDugme :hover, a :hover {
+    background-color: darkgoldenrod;
     color: white;
+    font-weight: bold;
 }
