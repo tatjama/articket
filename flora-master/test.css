@@ -1,0 +1,172 @@
+* {
+    margin: 0%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url("fontovi/script_font.otf");
+    font-family: noviFont;
+}
+
+#omotac {
+    height: 1957px;
+    width: 1629px;
+}
+
+#pozadina {
+    background-image: url("slike/background.jpg");
+    height: 40%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: noviFont;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#centar {
+    position: relative;
+    top: 22%;
+    left: 1%;
+}
+
+#ornament {
+    width: 20%;
+}
+
+#donji {
+    transform: rotate(180deg);
+    width: 20%;
+    position: relative;
+    top: 150px;
+    left: -300px;
+}
+
+h1 {
+    position: relative;
+    font-size: 8em;
+}
+
+h4 {
+    position: relative;
+    left: 250px;
+    top: -120px;
+    font-size: x-large;
+}
+
+#strelica {
+    position: relative;
+    top: 250px;
+    left: -550px;
+    width: 10%;
+    height: 10%;
+    padding: 20px;
+}
+
+#srednji {
+    width: 100%;
+    height: 40%;
+    background-position: center;
+    box-sizing: border-box;
+    align-content: center;
+    color: black;
+    padding: 0% 20%;
+    flex-wrap: nowrap;
+}
+
+h5 {
+    font-family: noviFont;
+    font-size: x-large;
+    margin: 5% 0% 3% 0%;
+}
+
+p {
+    font-size: medium;
+    margin: 0% 0% 2% 0%;
+}
+
+#slike {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cvece {
+    width: 31%;
+    height: 31%;
+    padding: 1%;
+    border: 2px solid lightgray;
+    box-shadow: 2px 2px 2px 4px lightgray;
+}
+
+.ponuda {
+    display: flex;
+    align-content: space-between;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 6% 0%;
+}
+
+.cena {
+    width: 70%;
+    text-align: right;
+    color: #ff7f27;
+}
+
+#uslovi {
+    height: 50%;
+    display: flex;
+    padding-top: 3%;
+}
+
+.uslovi {
+    width: 50%;
+    height: 80%;
+    border-bottom: solid 2px lightgrey;
+    padding: 2%;
+}
+
+li {
+    padding: 2%;
+}
+
+table {
+    border: solid 2px grey;
+    text-align: center;
+}
+
+td {
+    border: 2px white solid;
+    padding: 2%;
+}
+
+.siva {
+    background-color: lightgrey;
+}
+
+#ikonice {
+    text-align: center;
+}
+
+#drustvene {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.krug {
+    width: 6%;
+    height: 6%;
+    border-radius: 50%;
+    margin: 1%;
+}
+
+footer {
+    background-color: #ffca18;
+    padding: 1%;
+    color: white;
+    text-align: center;
+    border: solid 2px lightgrey;
+}
